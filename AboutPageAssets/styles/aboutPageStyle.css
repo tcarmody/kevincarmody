@@ -416,3 +416,65 @@ footer .footerNote {
 	font-family: sans-serif;
 }
 }
+/* Add these styles to your aboutPageStyle.css file */
+
+/* Desktop and Laptop Layout */
+@media only screen and (min-width: 1025px) {
+  /* Complete override for header layout */
+  header {
+    display: grid !important;
+    grid-template-areas:
+      "logo logo"
+      "photo content";
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+  }
+  
+  header .profileLogo {
+    grid-area: logo;
+    width: 100%;
+  }
+  
+  header .profilePhoto {
+    grid-area: photo;
+    float: none !important;
+    margin-right: 30px;
+  }
+  
+  header .profileHeader {
+    grid-area: content;
+    padding-top: 0 !important;
+    align-self: center;
+  }
+}
+
+/* Tablet Layout */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  /* Similar grid layout for tablets */
+  header {
+    display: grid !important;
+    grid-template-areas:
+      "logo logo"
+      "photo content";
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+  }
+  
+  header .profileLogo {
+    grid-area: logo;
+    width: 100%;
+  }
+  
+  header .profilePhoto {
+    grid-area: photo;
+    float: none !important;
+    margin-right: 20px;
+    margin-top: 0 !important;
+  }
+  
+  header .profileHeader {
+    grid-area: content;
+    margin-top: 0 !important;
+    align-self: center;
+  }
+}
